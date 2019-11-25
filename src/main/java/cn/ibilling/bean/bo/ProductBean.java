@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Taeyeon
@@ -28,8 +29,8 @@ public class ProductBean {
     @ApiModelProperty(value = "计费方式", name = "billingModeId")
     private String billingModeId;
     //生效时间
-    @ApiModelProperty(value = "生效时间", name = "eftDate")
-    private Date eftDate;
+    @ApiModelProperty(value = "生效时间", name = "effDate")
+    private Date effDate;
     //失效时间
     @ApiModelProperty(value = "失效时间", name = "expDate")
     private Date expDate;
@@ -48,28 +49,27 @@ public class ProductBean {
     //定价计划
     @ApiModelProperty(value = "定价计划", name = "pricingPlanBean")
     private PricingPlanBean pricingPlanBean;
-    //销售品ID
-    @ApiModelProperty(value = "所关联的销售品", name = "productOffer")
-    private ProductOfferDO productOffer;
+    //所关联的销售品
+    @ApiModelProperty(value = "所关联的销售品", name = "productOfferList")
+    private List<ProductOfferDO> productOfferList;
 
     public ProductBean() {
     }
 
-
-    public ProductBean(String productId, String productName, String productType, String propertyType, String billingModeId, Date eftDate, Date expDate, String state, String remark, Date createDate, Date lastUpdateDate, PricingPlanBean pricingPlanBean, ProductOfferDO productOffer) {
+    public ProductBean(String productId, String productName, String productType, String propertyType, String billingModeId, Date effDate, Date expDate, String state, String remark, Date createDate, Date lastUpdateDate, PricingPlanBean pricingPlanBean, List<ProductOfferDO> productOfferList) {
         this.productId = productId;
         this.productName = productName;
         this.productType = productType;
         this.propertyType = propertyType;
         this.billingModeId = billingModeId;
-        this.eftDate = eftDate;
+        this.effDate = effDate;
         this.expDate = expDate;
         this.state = state;
         this.remark = remark;
         this.createDate = createDate;
         this.lastUpdateDate = lastUpdateDate;
         this.pricingPlanBean = pricingPlanBean;
-        this.productOffer = productOffer;
+        this.productOfferList = productOfferList;
     }
 
     public String getProductId() {
@@ -112,12 +112,12 @@ public class ProductBean {
         this.billingModeId = billingModeId;
     }
 
-    public Date getEftDate() {
-        return eftDate;
+    public Date getEffDate() {
+        return effDate;
     }
 
-    public void setEftDate(Date eftDate) {
-        this.eftDate = eftDate;
+    public void setEffDate(Date effDate) {
+        this.effDate = effDate;
     }
 
     public Date getExpDate() {
@@ -168,11 +168,11 @@ public class ProductBean {
         this.pricingPlanBean = pricingPlanBean;
     }
 
-    public ProductOfferDO getProductOffer() {
-        return productOffer;
+    public List<ProductOfferDO> getProductOfferList() {
+        return productOfferList;
     }
 
-    public void setProductOffer(ProductOfferDO productOffer) {
-        this.productOffer = productOffer;
+    public void setProductOfferList(List<ProductOfferDO> productOfferList) {
+        this.productOfferList = productOfferList;
     }
 }

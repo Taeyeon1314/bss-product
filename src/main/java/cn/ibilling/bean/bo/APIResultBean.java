@@ -21,13 +21,13 @@ public class APIResultBean<T> {
 
     }
 
-    @ApiModelProperty(value = "调用是否正常的标志", name = "resultCode")
+    @ApiModelProperty(value = "调用是否正常的标志", name = "resultCode", required = true)
     private String resultCode;
 
-    @ApiModelProperty(value = "接口返回resultMsg，如果resultCode是1，那么resultMsg是错误信息", name = "resultMsg")
+    @ApiModelProperty(value = "接口返回resultMsg，如果resultCode是1，那么resultMsg是错误信息", name = "resultMsg", required = true)
     private String resultMsg;
 
-    @ApiModelProperty(value = "调用成功，返回的数据", name = "result")
+    @ApiModelProperty(value = "调用成功，返回的数据", name = "result", required = true)
     private T result;
 
     public APIResultBean(String resultCode, String resultMsg, T result) {
@@ -41,7 +41,6 @@ public class APIResultBean<T> {
         this.resultMsg = resultMsg;
         this.result = (T) new ListObject(result);
     }
-
 
 
     public APIResultBean(String resultCode, String resultMsg) {
