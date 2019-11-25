@@ -24,8 +24,8 @@ public class InsertProductParameter {
     @ApiModelProperty(value = "计费方式", name = "billingModeId", required = false)
     private String billingModeId;
     //生效时间
-    @ApiModelProperty(value = "生效时间", name = "eftDate", required = false)
-    private Date eftDate;
+    @ApiModelProperty(value = "生效时间", name = "effDate", required = false)
+    private Date effDate;
     //失效时间
     @ApiModelProperty(value = "失效时间", name = "expDate", required = false)
     private Date expDate;
@@ -42,12 +42,12 @@ public class InsertProductParameter {
     public InsertProductParameter() {
     }
 
-    public InsertProductParameter(String productName, String productType, String propertyType, String billingModeId, Date eftDate, Date expDate, String remark, String pricingPlanId, List<ProductAttrParameter> attrs) {
+    public InsertProductParameter(String productName, String productType, String propertyType, String billingModeId, Date effDate, Date expDate, String remark, String pricingPlanId, List<ProductAttrParameter> attrs) {
         this.productName = productName;
         this.productType = productType;
         this.propertyType = propertyType;
         this.billingModeId = billingModeId;
-        this.eftDate = eftDate;
+        this.effDate = effDate;
         this.expDate = expDate;
         this.remark = remark;
         this.pricingPlanId = pricingPlanId;
@@ -86,12 +86,12 @@ public class InsertProductParameter {
         this.billingModeId = billingModeId;
     }
 
-    public Date getEftDate() {
-        return eftDate;
+    public Date getEffDate() {
+        return effDate;
     }
 
-    public void setEftDate(Date eftDate) {
-        this.eftDate = eftDate;
+    public void setEffDate(Date effDate) {
+        this.effDate = effDate;
     }
 
     public Date getExpDate() {
@@ -124,5 +124,20 @@ public class InsertProductParameter {
 
     public void setAttrs(List<ProductAttrParameter> attrs) {
         this.attrs = attrs;
+    }
+
+    @Override
+    public String toString() {
+        return "InsertProductParameter{" +
+                "productName='" + productName + '\'' +
+                ", productType='" + productType + '\'' +
+                ", propertyType='" + propertyType + '\'' +
+                ", billingModeId='" + billingModeId + '\'' +
+                ", effDate=" + effDate +
+                ", expDate=" + expDate +
+                ", remark='" + remark + '\'' +
+                ", pricingPlanId='" + pricingPlanId + '\'' +
+                ", attrs=" + attrs +
+                '}';
     }
 }

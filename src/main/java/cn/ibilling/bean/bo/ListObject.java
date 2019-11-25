@@ -1,7 +1,5 @@
 package cn.ibilling.bean.bo;
 
-import io.swagger.annotations.ApiModel;
-
 import java.util.List;
 
 /**

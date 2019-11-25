@@ -73,4 +73,15 @@ public class QueryProductOfferParameter {
     public void setLimit(Integer limit) {
         this.limit = limit;
     }
+
+    @Override
+    public String toString() {
+        return "QueryProductOfferParameter{" +
+                "offerName='" + offerName + '\'' +
+                ", state='" + state + '\'' +
+                ", remark='" + remark + '\'' +
+                ", start=" + start +
+                ", limit=" + limit +
+                '}';
+    }
 }

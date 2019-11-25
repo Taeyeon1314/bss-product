@@ -1,12 +1,10 @@
 package cn.ibilling.bean.bo;
 
-import cn.ibilling.constant.ResultCode;
+import cn.ibilling.module.product.constant.ResultCode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

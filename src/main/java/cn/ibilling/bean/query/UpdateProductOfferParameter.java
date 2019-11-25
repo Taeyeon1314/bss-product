@@ -15,7 +15,7 @@ public class UpdateProductOfferParameter {
     private String offerId;
     @ApiModelProperty(value = "销售品名称", name = "offerName", required = true)
     private String offerName;
-    @ApiModelProperty(value = "生效时间", name = "eftDate", required = false)
+    @ApiModelProperty(value = "生效时间", name = "effDate", required = false)
     private Date effDate;
     @ApiModelProperty(value = "失效时间", name = "expDate", required = false)
     private Date expDate;
@@ -82,5 +82,17 @@ public class UpdateProductOfferParameter {
 
     public void setProductIds(List<String> productIds) {
         this.productIds = productIds;
+    }
+
+    @Override
+    public String toString() {
+        return "UpdateProductOfferParameter{" +
+                "offerId='" + offerId + '\'' +
+                ", offerName='" + offerName + '\'' +
+                ", effDate=" + effDate +
+                ", expDate=" + expDate +
+                ", remark='" + remark + '\'' +
+                ", productIds=" + productIds +
+                '}';
     }
 }

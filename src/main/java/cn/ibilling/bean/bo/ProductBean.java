@@ -1,7 +1,6 @@
 package cn.ibilling.bean.bo;
 
-import cn.ibilling.bean.dto.ProductOfferDO;
-import io.swagger.annotations.ApiModel;
+import cn.ibilling.module.product.bean.dto.ProductOfferDO;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
@@ -13,6 +12,7 @@ import java.util.List;
  */
 
 public class ProductBean {
+
     //产品ID
     @ApiModelProperty(value = "产品ID", name = "productId")
     private String productId;
@@ -174,5 +174,24 @@ public class ProductBean {
 
     public void setProductOfferList(List<ProductOfferDO> productOfferList) {
         this.productOfferList = productOfferList;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductBean{" +
+                "productId='" + productId + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productType='" + productType + '\'' +
+                ", propertyType='" + propertyType + '\'' +
+                ", billingModeId='" + billingModeId + '\'' +
+                ", effDate=" + effDate +
+                ", expDate=" + expDate +
+                ", state='" + state + '\'' +
+                ", remark='" + remark + '\'' +
+                ", createDate=" + createDate +
+                ", lastUpdateDate=" + lastUpdateDate +
+                ", pricingPlanBean=" + pricingPlanBean +
+                ", productOfferList=" + productOfferList +
+                '}';
     }
 }

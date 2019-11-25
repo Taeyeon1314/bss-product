@@ -1,6 +1,6 @@
 package cn.ibilling.bean.bo;
 
-import cn.ibilling.bean.dto.ProductDO;
+import cn.ibilling.module.product.bean.dto.ProductDO;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;

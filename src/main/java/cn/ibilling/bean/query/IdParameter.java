@@ -32,7 +32,10 @@ public class IdParameter {
         this.id = id;
     }
 
-    public IdParameter(@NotEmpty(message = "id不能为空") String id) {
+	public IdParameter() {
+	}
+
+	public IdParameter(@NotEmpty(message = "id不能为空") String id) {
         this.id = id;
     }
 }

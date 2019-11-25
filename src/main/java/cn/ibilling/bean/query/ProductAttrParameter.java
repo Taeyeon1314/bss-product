@@ -37,4 +37,12 @@ public class ProductAttrParameter {
     public void setAttrValue(String attrValue) {
         this.attrValue = attrValue;
     }
+
+    @Override
+    public String toString() {
+        return "ProductAttrParameter{" +
+                "attrField='" + attrField + '\'' +
+                ", attrValue='" + attrValue + '\'' +
+                '}';
+    }
 }
